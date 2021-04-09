@@ -57,11 +57,13 @@ bot.on("message", async message => {
             return message.reply("ERROR: the "^" key is invalid!")
         
         }
+	const content = args.join(' ').replace(`say`, '')
         const sayMessage = args.slice(0).join(" ");
         message.delete().catch(O_o => { });
 	    
 	const exampleEmbed = new Discord.MessageEmbed()
 		.setColor('ff55b2')
+		.setTitle(`${message.author.tag} sent a message!`)
 		.setDescription(`<@${message.author.id}> \n ${message.content}`)
         	.setThumbnail(message.author.avatarURL())
         	.setFooter('User ID: ' + message.author.id)
