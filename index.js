@@ -59,11 +59,14 @@ bot.on("message", async message => {
         }
         const sayMessage = args.slice(0).join(" ");
         message.delete().catch(O_o => { });
+	    
 	const exampleEmbed = new Discord.MessageEmbed()
-	embed.setDescription(`<@${message.author.id}> \n ${message.content}`);
-        embed.setThumbnail(message.author.avatarURL());
-        embed.setFooter('User ID: ' + message.author.id);
-	message.channel.send(exampleEmbed);
+		.setColor('ff55b2')
+		.setDescription(`<@${message.author.id}> \n ${message.content}`)
+        	.setThumbnail(message.author.avatarURL())
+        	.setFooter('User ID: ' + message.author.id)
+			
+		message.channel.send(exampleEmbed);
         //message.channel.send(sayMessage).catch(err => message.reply(`Something went wrong... ${err}`));
         return;
     };
