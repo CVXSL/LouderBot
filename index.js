@@ -59,6 +59,9 @@ bot.on("message", async message => {
         }
         const sayMessage = args.slice(0).join(" ");
         message.delete().catch(O_o => { });
+	embed.setDescription(`<@${message.author.id}> \n ${message.content}`);
+        embed.setThumbnail(message.author.avatarURL());
+        embed.setFooter('User ID: ' + message.author.id);
         message.channel.send(sayMessage).catch(err => message.reply(`Something went wrong... ${err}`));
         return;
     };
