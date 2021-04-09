@@ -60,8 +60,8 @@ bot.on("message", async message => {
         const sayMessage = args.slice(0).join(" ");
         message.delete().catch(O_o => { });
 	
-	const exampleEmbed = new Discord.MessageEmbed()
 	const content = args.join(' ').replace(`say`, '')
+	const exampleEmbed = new Discord.MessageEmbed()
 		.setColor('352256')
 		.setTitle(`${message.author.tag} sent a message!`)
 		.setDescription(`<@${message.author.id}> \n ${message.content}`)
