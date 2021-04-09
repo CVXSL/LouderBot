@@ -22,7 +22,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Help')
-            .setDescription('If you need help, join our support server and DM ``OS Utilities``. \n \n (" [``[Click here]``](https://discord.gg/wstKjrX)") \n \n *If you are looking for a list of commands, then use the ``=commands`` command!*')
+            .setDescription('If you need help, join our support server and DM ``OS Utilities``. \n \n [``[Click here]``](https://discord.gg/5EZpkaGGDW) \n \n *If you are looking for a list of commands, then use the ``=commands`` command!*')
 
         message.channel.send(exampleEmbed);
     }
