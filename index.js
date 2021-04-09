@@ -35,7 +35,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Commands')
-            .setDescription('**Say** = Just say the word ``say`` then say what you want the bot to say. (EX: ``say <message>`` \n **Help** = Use the ``%help`` command if you need help from out support server.')
+            .setDescription('**Say** = Just say the word ``say`` then say what you want the bot to say. (EX: ``say <message>`` \n \n **Help** = Use the ``%help`` command if you need help from out support server.')
 
         message.channel.send(exampleEmbed);
     }
