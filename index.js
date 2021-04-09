@@ -59,13 +59,14 @@ bot.on("message", async message => {
         }
         const sayMessage = args.slice(0).join(" ");
         message.delete().catch(O_o => { });
+	    
+	message.channel.send(sayMessage).catch(err => message.reply(`Something went wrong... ${err}`));
 	   
 	const exampleEmbed = new Discord.MessageEmbed()
 		.setColor('352256')
-        	.setFooter('${message.author.tag} sent a message! \n User ID: ' + message.author.id)
+        	.setFooter('User: '  + message.author.tag '\n User ID: ' + message.author.id)
 			
 		message.channel.send(exampleEmbed);
-        message.channel.send(sayMessage).catch(err => message.reply(`Something went wrong... ${err}`));
         return;
     };
 });
