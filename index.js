@@ -64,7 +64,7 @@ bot.on("message", async message => {
 	   
 	const exampleEmbed = new Discord.MessageEmbed()
 		.setColor('352256')
-        	.setDescription(`Message: "${content}"`)
+        	.setDescription(`Message: "${message.content}"`)
 		.setFooter(`${message.author.tag} \n <@${message.author.id}>`)
 			
 		message.channel.send(exampleEmbed);
