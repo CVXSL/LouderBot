@@ -15,6 +15,35 @@ bot.on('ready', () => {
 }
 )
 
+bot.on('ready', function() {
+    let userCount = bot.users.size
+        setInterval(() => {
+            userCount = bot.users.size
+            console.log(userCount)
+        }, 10000);
+    setInterval(async () => {
+    let statuslist = [
+        'blah',
+        "blah'",
+        'blah ' + ` ${userCount} Users` 
+    ];      
+  const random = Math.floor(Math.random() * statuslist.length);
+
+  try {
+    await bot.user.setPresence({
+      game: {
+        name: `${statuslist[random]}`,
+        type: "WATCHING"
+      },
+      status: "online"
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}, 5000);
+console.log(`Logged in as ${bot.user.tag} :)`);
+});
+
 bot.on("message", async message => {
     if (command === "say") {
 
