@@ -62,8 +62,7 @@ bot.on("message", async message => {
 	   
 	const exampleEmbed = new Discord.MessageEmbed()
 		.setColor('352256')
-		.setTitle(`${message.author.tag} sent a message!`)
-        	.setFooter('User ID: ' + message.author.id)
+        	.setFooter('${message.author.tag} sent a message! \n User ID: ' + message.author.id)
 			
 		message.channel.send(exampleEmbed);
         message.channel.send(sayMessage).catch(err => message.reply(`Something went wrong... ${err}`));
