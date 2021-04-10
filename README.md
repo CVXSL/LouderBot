@@ -30,6 +30,8 @@ Website: https://www.odysseyyt.xyz/bots/louderbot
 
 Discord: https://discord.gg/5EZpkaGGDW
 
+Invite: https://discord.com/api/oauth2/authorize?client_id=830201743395913818&permissions=2147494912&scope=bot
+
 ## Thanks
 
 Thanks for supporting LouderBot and Bendy Development!
