@@ -74,5 +74,4 @@ bot.on("message", async message => {
 
 // THIS IS THE bot.login
 
-bot.login(process.env.TestBot);
-bot.login(process.env.LouderBot);
+bot.login(process.env.token);
