@@ -1,7 +1,7 @@
 # LouderBot
 ### Welcome to LouderBot
 
-Project Start: 09/04/2021 \nMade Public: 10/04/2021
+Project Start: 09/04/2021 | Made Public: 10/04/2021
 
 ## Commands
 
