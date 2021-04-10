@@ -7,7 +7,7 @@ const prefix = ""
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity("for the \"say\" command!", { 
+    bot.user.setActivity("${bot.guild.size} servers!", { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
@@ -35,7 +35,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Commands')
-            .setDescription('**Say** = Just say the word ``say`` then say what you want the bot to say. (EX: ``say <message>`` \n \n **Help** = Use the ``%help`` command if you need help from out support server.')
+            .setDescription('**Say** = Just say the word ``say`` then say what you want the bot to say. (EX: ``say <message>``) \n \n**Help** = Use the ``%help`` command if you need help from our support server. \n \n**Invite** = Use the ``%invite`` command if you want invite this bot to your server.')
 
         message.channel.send(exampleEmbed);
     }
@@ -71,6 +71,30 @@ bot.on("message", async message => {
         return;
     };
 });
+
+//invite command
+bot.on('message', async message => {
+    if (message.content === "%invite") {
+	if (message.channel.type == "dm") return;
+        const exampleEmbed = new Discord.MessageEmbed()
+	    .setColor('352256')
+            .setTitle('Invite')
+            .setDescription('[``[Click here]``](https://discord.gg/5EZpkaGGDW)')
+
+        message.channel.send(exampleEmbed);
+    }
+})
+
+bot.on('message', async message => {
+    if (message.content === "%ping") {
+        const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('ff55b2')
+            .addField("🏓 Pong", `${Math.round(bot.ws.ping)}ms`, false)
+	
+        message.channel.send(exampleEmbed);
+    }
+
+})
 
 // THIS IS THE bot.login
 
