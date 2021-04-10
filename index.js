@@ -35,7 +35,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Commands')
-            .setDescription('**Say** = Just say the word ``say`` then say what you want the bot to say. (EX: ``say <message>``) \n \n**Help** = Use the ``%help`` command if you need help from our support server. \n \n**Invite** = Use the ``%invite`` command if you want invite this bot to your server.')
+            .setDescription('**Say** = ``say <message> (not prefix)`` This command can be used to say something. \n \n**Help** = ``%help`` This command can be used to join our support server. \n \n**Invite** = ``%invite`` *This command can be used to invite this bot to your server.* \n \n**Ping** = ``%ping`` *This command can be used to see the ms (ping) of the bot.*')
 
         message.channel.send(exampleEmbed);
     }
