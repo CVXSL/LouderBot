@@ -64,7 +64,7 @@ bot.on("message", async message => {
 	   
 	const exampleEmbed = new Discord.MessageEmbed()
 		.setColor('352256')
-        	.setDescription(`If spamming, please consider muting this user!`)
+        	.setDescription(`If spamming, please consider \nmuting this user!`)
 		.setFooter(`User: ${message.author.tag} \n User ID: ${message.author.id}`)
 			
 		message.channel.send(exampleEmbed);
