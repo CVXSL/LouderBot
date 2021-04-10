@@ -35,7 +35,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Commands')
-            .setDescription('**Say** = ``say <message> (not prefix)`` This command can be used to say something. \n \n**Help** = ``%help`` This command can be used to join our support server. \n \n**Invite** = ``%invite`` *This command can be used to invite this bot to your server.* \n \n**Ping** = ``%ping`` *This command can be used to see the ms (ping) of the bot.*')
+            .setDescription('**Say** = ``say <message> (not prefix)`` *This command can be used to say something.* \n \n**Help** = ``%help`` *This command can be used to join our support server.* \n \n**Invite** = ``%invite`` *This command can be used to invite this bot to your server.* \n \n**Ping** = ``%ping`` *This command can be used to see the ms (ping) of the bot.*')
 
         message.channel.send(exampleEmbed);
     }
