@@ -64,8 +64,8 @@ bot.on("message", async message => {
 	   
 	const exampleEmbed = new Discord.MessageEmbed()
 		.setColor('352256')
-        	.setDescription(`Message: "${message.content}"`)
-		.setFooter(`${message.author.tag} \n <@${message.author.id}>`)
+        	.setDescription(`If spamming, please consider muting this user!`)
+		.setFooter(`User: ${message.author.tag} \n User ID: ${message.author.id}`)
 			
 		message.channel.send(exampleEmbed);
         return;
@@ -75,3 +75,4 @@ bot.on("message", async message => {
 // THIS IS THE bot.login
 
 bot.login(process.env.token);
+  
