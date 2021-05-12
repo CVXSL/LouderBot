@@ -7,8 +7,8 @@ const prefix = ""
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity("over your server!", { 
-        type: "WATCHING", 
+    bot.user.setActivity("Bot is going offline permanently on Wednesday, May 12th, 2021!", { 
+        type: "PLAYING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
 
