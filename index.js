@@ -7,7 +7,7 @@ const prefix = ""
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity("Bot is going offline permanently on Wednesday, May 12th, 2021!", { 
+    bot.user.setActivity("Bot is going offline permanently on Wednesday, May 12th, 2021 at 6PM EST!", { 
         type: "PLAYING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
@@ -22,7 +22,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Help')
-            .setDescription('If you need help, join our support server and DM ``OS Utilities``. \n \n [``[Click here]``](https://discord.gg/5EZpkaGGDW) \n \n *If you are looking for a list of commands, then use the ``=commands`` command!*')
+            .setDescription('If you need help, join our support server and DM ``OS Utilities``. \n \n [``[Click here]``](https://discord.gg/y9MGyjrYZu) \n \n *If you are looking for a list of commands, then use the ``=commands`` command!*')
 
         message.channel.send(exampleEmbed);
     }
@@ -79,7 +79,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Invite')
-            .setDescription('[``[Click here]``](https://discord.gg/5EZpkaGGDW)')
+            .setDescription('[``[Click here]``](https://discord.com/oauth2/authorize?client_id=842048131524984842&permissions=2147494912&scope=bot)')
 
         message.channel.send(exampleEmbed);
     }
