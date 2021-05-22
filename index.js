@@ -28,6 +28,12 @@ bot.on('message', async message => {
     }
 })
 
+bot.on("guildCreate", guild => {
+	const tdc = bot.guilds.cache.get('763565098978770954');
+	const member = tdc.members.cache.get('634796720206774312');
+	member.send(`I am now in ${bot.guilds.cache.size} servers!`);
+})
+	
 //commands command
 bot.on('message', async message => {
     if (message.content === "%commands") {
