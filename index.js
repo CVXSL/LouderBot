@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const prefix = ""
+const prefix = "%"
 
 // THIS IS THE STATUS
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity("Bot is going offline permanently on Wednesday, May 12th, 2021 at 6PM EST!", { 
-        type: "PLAYING", 
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers`, { 
+        type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
 
@@ -22,7 +22,7 @@ bot.on('message', async message => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('352256')
             .setTitle('Help')
-            .setDescription('If you need help, join our support server and DM ``OS Utilities``. \n \n [``[Click here]``](https://discord.gg/y9MGyjrYZu) \n \n *If you are looking for a list of commands, then use the ``=commands`` command!*')
+            .setDescription('If you need help, join our support server.\n\n[``[Click here]``](https://discord.gg/et3weVTcRz)\n\n*If you are looking for a list of commands, then use the ``%commands`` command!*')
 
         message.channel.send(exampleEmbed);
     }
@@ -49,7 +49,7 @@ bot.on("message", async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 	
-    if (command === "say") {
+    if (message.content === "say") {
 	if (message.channel.type == "dm") return;
 
         if (!args[0]) return message.channel.send("What should i say?, try `say <message>`")
