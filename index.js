@@ -7,7 +7,25 @@ const prefix = "%"
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers!`, { 
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
+        type: "WATCHING", 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    });
+
+}
+)
+
+bot.on('guildMemberAdd', member => {
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
+        type: "WATCHING", 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    });
+
+}
+)
+
+bot.on("guildCreate", guild => {
+bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
@@ -26,12 +44,6 @@ bot.on('message', async message => {
 
         message.channel.send(exampleEmbed);
     }
-})
-
-bot.on("guildCreate", guild => {
-	const tdc = bot.guilds.cache.get('763565098978770954');
-	const member = tdc.members.cache.get('634796720206774312');
-	member.send(`I am now in ${bot.guilds.cache.size} servers!`);
 })
 	
 //commands command
