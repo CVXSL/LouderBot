@@ -53,7 +53,7 @@ bot.on('message', async message => {
 bot.user.setActivity(`<:Yellow:794385909536522251> Possible Down Time and Latency`, { 
         type: "PLAYING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-      }
+      })
    });
 })
 
@@ -62,7 +62,7 @@ bot.on('message', async message => {
 bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-      }
+      })
    });
 })
 	    
