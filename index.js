@@ -62,7 +62,7 @@ bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users
 
 bot.on('message', async message => {
     if (message.content === "%status t") {
-bot.user.setActivity(`${users} user${users !== 1 ? 's' : ''}`, { 
+bot.user.setActivity(`${users}`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
       })
