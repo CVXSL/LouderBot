@@ -58,7 +58,7 @@ const activities_list = [
 bot.on('ready', () => {
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-        client.user.setActivity(activities_list[index], { type: 'WATCHING' });
+        bot.user.setActivity(activities_list[index], { type: 'WATCHING' });
     }, 10000);
 });
 
