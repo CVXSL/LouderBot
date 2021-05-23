@@ -22,6 +22,13 @@ bot.on('guildMemberAdd', member => {
     });
 })
 
+bot.on('guildMemberRemove', member => {
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
+        type: "WATCHING", 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    });
+})
+
 bot.on("guildCreate", guild => {
 bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
         type: "WATCHING", 
