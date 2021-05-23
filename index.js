@@ -52,7 +52,7 @@ bot.user.setActivity(`🟡 Possible Down Time and Latency`, {
 })
 
 bot.on('message', async message => {
-    if (message.content === "%satus g") {
+    if (message.content === "%status g") {
 bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
