@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const prefix = "%"
+const prefix = ""
 
 // THIS IS THE STATUS
 bot.on('ready', () => {
@@ -83,7 +83,7 @@ bot.on("message", async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 	
-    if (message.starts.with === "say") {
+    if (command === "say") {
 	if (message.channel.type == "dm") return;
 
         if (!args[0]) return message.channel.send("What should i say?, try `say <message>`")
