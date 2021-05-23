@@ -6,16 +6,10 @@ const prefix = ""
 // THIS IS THE STATUS
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity(`<:Red:845847165128671232> Restarting!`, { 
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
-
-	setTimeout(function() {
-    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
-        type: "WATCHING", 
-        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  }, 2000)});
 	
 }
 )
@@ -50,7 +44,7 @@ bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users
 
 bot.on('message', async message => {
     if (message.content === "%status y") {
-bot.user.setActivity(`$<:Yellow:794385909536522251> Possible Down Time and Latency`, { 
+bot.user.setActivity(`🟡 Possible Down Time and Latency`, { 
         type: "PLAYING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
       })
