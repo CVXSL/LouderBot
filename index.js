@@ -49,8 +49,8 @@ bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users
 })
 
 bot.on('message', async message => {
-    if (message.content === "%satus y") {
-bot.user.setActivity(`<:Yellow:794385909536522251> Possible Down Time and Latency`, { 
+    if (message.content === "%status y") {
+bot.user.setActivity(`$<:Yellow:794385909536522251> Possible Down Time and Latency`, { 
         type: "PLAYING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
       })
