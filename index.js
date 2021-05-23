@@ -11,6 +11,12 @@ bot.on('ready', () => {
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
 
+	setTimeout(function() {
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
+        type: "WATCHING", 
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }, 1000)});
+	
 }
 )
 
