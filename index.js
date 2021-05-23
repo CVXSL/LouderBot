@@ -3,25 +3,6 @@ const bot = new Discord.Client();
 
 const prefix = "%"
 
-const { Player } = require("discord-player");
-
-const player = new Player(client);
-
-bot.player = player;
-
-bot.player.on("trackStart", (message, track) => message.channel.send(`Now playing ${track.title}...`))
-
-bot.on("message", async (message) => {
-
-    const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
-    if(command === "play"){
-        bot.player.play(message, args[0]);
-    }
-
-});
-
 // THIS IS THE STATUS
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
