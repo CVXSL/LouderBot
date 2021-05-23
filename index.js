@@ -83,7 +83,7 @@ bot.on("message", async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 	
-    if (command === "say") {
+    if (message.starts.with === "say") {
 	if (message.channel.type == "dm") return;
 
         if (!args[0]) return message.channel.send("What should i say?, try `say <message>`")
