@@ -6,7 +6,7 @@ const prefix = ""
 // THIS IS THE STATUS
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-    bot.user.setActivity(`%help In ${bot.users.cache.size} Servers with ${bot.guilds.users.cache.size} users!`, { 
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
