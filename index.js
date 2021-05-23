@@ -4,7 +4,6 @@ const bot = new Discord.Client();
 const prefix = "%"
 
 // THIS IS THE STATUS
-
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
     bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
