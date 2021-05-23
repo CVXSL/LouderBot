@@ -48,20 +48,6 @@ bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users
     });
 })
 
-const activities_list = [
-    "For Rule Breakers", 
-    "The purple names",
-    "#general", 
-    "The mods do their job"
-    ];
-
-bot.on('ready', () => {
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-        bot.user.setActivity(activities_list[index], { type: 'WATCHING' });
-    }, 10000);
-});
-
 //help command
 bot.on('message', async message => {
     if (message.content === "%help") {
@@ -88,6 +74,7 @@ bot.on('message', async message => {
     }
 })
 
+//say command
 bot.on("message", async message => {
 	
     if(message.author.bot) return;
@@ -96,7 +83,7 @@ bot.on("message", async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 	
-    if (message.content === "say") {
+    if (command === "say") {
 	if (message.channel.type == "dm") return;
 
         if (!args[0]) return message.channel.send("What should i say?, try `say <message>`")
