@@ -153,4 +153,4 @@ bot.on('message', async message => {
 
 // THIS IS THE bot.login
 
-bot.login(process.env.tempTOKEN);
+bot.login(process.env.token);
