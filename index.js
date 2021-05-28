@@ -6,8 +6,7 @@ const prefix = ""
 // THIS IS THE STATUS
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag} :)`);
-//    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, { 
-    bot.user.setActivity(`451781`, { 
+    bot.user.setActivity(`%help In ${bot.guilds.cache.size} Servers with ${bot.users.cache.size} users!`, {  
         type: "WATCHING", 
         url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
     });
@@ -154,4 +153,4 @@ bot.on('message', async message => {
 
 // THIS IS THE bot.login
 
-bot.login(process.env.token);
+bot.login(process.env.tempTOKEN);
